@@ -1,3 +1,28 @@
+const nav = document.querySelector('.navigation');
+
+let lastScrollY = window.scrollY;
+let scrollUpDistance = 0;
+const threshold = 300; // сколько нужно проскроллить вверх, чтобы показать меню
+
+window.addEventListener('scroll', () => {
+    const currentScrollY = window.scrollY;
+
+    // Скролл вниз
+    if (currentScrollY > lastScrollY) {
+        nav.classList.add('hide');
+        scrollUpDistance = 0; // сбрасываем
+    } 
+    // Скролл вверх
+    else {
+        scrollUpDistance += lastScrollY - currentScrollY;
+
+        if (scrollUpDistance > threshold) {
+            nav.classList.remove('hide');
+        }
+    }
+
+    lastScrollY = currentScrollY;
+});
 
 document.addEventListener('DOMContentLoaded', function() {
     const items = document.querySelectorAll('.vertic_item');
@@ -17,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
         2: {
             title: "Визуализация <br> action-игры",
             tags: ["Игры", "Коннцепт-арт", "3D"],
-            desc: "Визуализация в&nbsp;3D,&nbsp;расказывающая о&nbsp;фэнтезийном мире, где&nbsp;задолго до&nbsp;событий игры люди столкнулись с неведомой силой&nbsp;–&nbsp;порчей. Людям пришлось приспособились к&nbsp;жизни на&nbsp;летающих островах. Чтобы сохранить сообщение между землями они&nbsp;провели между ними канаты. Так&nbsp;появился особый класс людей&nbsp;–&nbsp;канатоходцы.",
+            desc: "Визуализация в&nbsp;3D,&nbsp;расказывающая о&nbsp;фэнтезийном мире, где&nbsp;задолго до&nbsp;событий игры люди столкнулись с&nbsp;неведомой силой&nbsp;–&nbsp;порчей. Людям пришлось приспособились к&nbsp;жизни на&nbsp;летающих островах. Чтобы сохранить сообщение между землями они&nbsp;провели между ними канаты. Так&nbsp;появился особый класс людей&nbsp;–&nbsp;канатоходцы.",
             year: "2025",
             link: "game.html",
             image: "assets/images/index/re.png"
@@ -469,3 +494,4 @@ prevBtn.addEventListener('click', () => {
 
     ima.src = imag[current];
 });
+

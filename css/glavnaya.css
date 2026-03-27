@@ -88,6 +88,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 8px;
 }
 
 .tag{
@@ -164,6 +165,7 @@
 }
 
 .vertic{
+    width: auto;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -177,18 +179,19 @@
 .vertic_item{
     position: relative;
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 
     color: white;
     font-size: 22px;
     font-family: "CommissionerR";
 }
 
-.vertic_item span{
-    padding: 8px;
-}
 
 .vertic_item img {
     width: 100%;
+    height: auto;
     display: block;
 }
 
@@ -196,7 +199,8 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.6);
+    width: 100%;
+    background: rgba(255,255,255,0.5);
     transition: 0.3s;
 }
 
@@ -205,9 +209,13 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 15px;
+    width: 100%;
     height: 100%;
-    background: linear-gradient(to bottom, rgb(172, 11, 13),  rgb(59, 0, 5));
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgb(0, 0, 0, 0.4) 100%
+    );
 }
 
 .vertic_item span {
@@ -216,10 +224,18 @@
     left: 10px;
     color: white;
     z-index: 2;
+    padding: 8px;
+
+    max-width: 200px;
 }
 
+
 .vertic_item:hover::before {
-    background: rgba(0,0,0,0);
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgb(0, 0, 0, 0.4) 100%
+    );
 }
 
 .vertic_item.active::before {
@@ -233,6 +249,8 @@
 
     display: flex;
     justify-content: flex-end; 
+
+
 }
 
 /* БЛЮР */
@@ -281,19 +299,21 @@
 /* Если нужно более плавное размытие с маской */
 .prew_inner {
     position: relative;
-    width: 55%;
+    width: 100%;
     height: 100%;
+    left: -8px;
 }
 
 
 .prew_inner img {
     position: absolute;
-    inset: 0;
+    bottom: 0;
+    width: 600px;
 
     transition: 
-        opacity 0.1s ease,
+        opacity 0.3s ease,
         transform 0.5s ease,
-        filter 0.1s ease;
+        filter 0.3s ease;
 }
 
 /* текущая */
@@ -326,7 +346,8 @@
 
 
 .triangle{
-    margin-left: -24px;
+    margin-left: 0px;
+    padding-bottom: 624px;
 }
 
 
@@ -354,11 +375,12 @@
 }
 
 .text_proj h3{
-    max-width: 527px;
+    max-width:727px;
 }
 
 .desc{
     max-width: 498px;
+    min-width: 445px;
 }
 
 .tags{
