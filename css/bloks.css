@@ -1,0 +1,307 @@
+.article{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 24px;
+    padding-bottom: 64px;
+}
+
+.article p{
+    max-width: 524px;
+}
+
+.block{
+    padding-bottom: 256px;
+}
+
+
+
+/* РЕФЕРЕНСЫ */
+.podpis{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.ref_right{
+    max-width: 524px;
+    padding-bottom: 196px;
+}
+
+.itog{
+    border-radius: 30px;
+    border: 1px solid var(--middle);
+    padding: 16px 32px;
+    margin-top: 24px;
+    color: black;
+    background: white;
+
+    cursor: pointer;
+}
+
+.itog:hover{
+    border: 1px solid var(--red);
+    color: var(--red);
+}
+
+.itog:active{
+    border: 1px solid var(--pink);
+    color: var(--pink);
+}
+
+
+
+.three{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: nowrap;
+}
+.im_text{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.im_text img{
+    max-width: 100%;
+
+}
+
+
+/* ДВА и ОДИН */
+
+.two{
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: nowrap;
+    padding-bottom: 24px;
+}
+
+.two img{
+    max-width: 100%;
+}
+
+.one_im img{
+    max-width: 100%;
+}
+
+/* ОДИН СЛЕВА ДВА СПРАВА */
+
+.vertic_two{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.end{
+    padding-bottom: 120px;
+}
+
+/* ВНИЗУ С МАЛЕНЬКИМ */
+
+.with_little{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+
+    padding-bottom: 256px;
+}
+.with_little img{
+    max-width: 100%;
+    min-width: 300px;
+}
+/* ТРИПОДРЯД */
+
+.setka_3{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+
+    padding-bottom: 256px;
+}
+
+.setka_3 img{
+    max-width: 100%;
+}
+
+/* ДВА */
+
+.setka_2{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 24px;
+    align-items: end;
+
+    padding-bottom: 256px;
+
+}
+
+.setka_2 img{
+    width: 100%;
+    max-width: 798px;
+    min-width: auto;
+    display: block;
+}
+/* СЛАЙДЕР СЛАЙДЕР */
+
+.slider{
+    padding-bottom: 256px;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.slider_image {
+    width: 100%;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.slider_image img {
+    max-width:100%;
+}
+
+/* RANGE */
+.range {
+    width: 658px;
+    appearance: none;
+    height: 4px;
+    background: #ccc;
+    outline: none;
+}
+
+.small{
+    width: 100%;
+}
+
+.pols{
+    text-align: end;
+    padding-bottom: 120px;
+}
+
+/* ползунок */
+.range::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.range::-webkit-slider-thumb:active {
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: var(--red);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Firefox */
+.range::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0,2s;
+}
+
+/* КАРУСЕЛЬ КАРУСЕЛЬ */
+
+.kar_next{
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    justify-content: end;
+    padding-top: 24px;
+}
+
+
+
+/* ДРУГИЕ ПРОЕКТЫ */
+
+.other h1{
+    color: black;
+    padding-bottom: 120px;
+}
+
+
+.other{
+    padding-bottom: 256px;
+}
+
+
+.hor_scroll{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 24px;
+
+    overflow-y:hidden;
+    overflow-x: visible;
+    scroll-behavior: auto;
+
+    margin-left: calc(-1 * clamp(16px, 10vw, 150px));
+    margin-right: calc(-1 * clamp(16px, 10vw, 150px));
+  
+    padding-left: clamp(16px, 10vw, 150px);
+    padding-right: clamp(16px, 10vw, 150px);
+
+}
+
+
+.hor_scroll::-webkit-scrollbar {
+    display: none; 
+}
+
+.kletka{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.kletka_niz{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.kletka_niz h4{
+    max-width: 356px;
+}
+
+.klet_im{
+    position: relative;
+    height: 725px;
+}
+
+.klet_im::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.klet_im:hover::before {
+    opacity: 0;
+}
+
+
+

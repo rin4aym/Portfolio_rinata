@@ -1,0 +1,334 @@
+@font-face {
+    font-family: "CommissionerR";
+    src:url('../assets/fonts/Commissioner-Regular.ttf');
+}
+
+@font-face {
+    font-family: "CommissionerSB";
+    src:url('../assets/fonts/Commissioner-SemiBold.ttf');
+}
+
+@font-face {
+    font-family: "CommissionerME";
+    src:url('../assets/fonts/Commissioner-Medium.ttf');
+}
+
+:root{
+    --darkred: #2F0006;
+    --grey: #1A1A1A;
+    --blackred: #240000;
+    --cherry: #450909;
+    --red: #AC0B0D;
+    --pink: #F00003;
+    --lightgrey: #323232;
+    --middle: #747474;
+}
+
+
+body{
+    overflow-x: hidden;
+}
+
+h1{
+    font-size: 78px;
+    font-family: "CommissionerSB";
+    text-transform: uppercase;
+    color: white;
+    line-height: 109%;
+}
+
+h2{
+    font-size: 47px;
+    font-family: "CommissionerSB";
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 36px;
+    font-family: "CommissionerSB";
+    text-transform: uppercase;
+    line-height: 121%;
+}
+
+h4{
+    font-size: 32px;
+    font-family: "CommissionerSB";
+}
+p {
+    font-size: 22px;
+    font-family: "CommissionerR";
+    line-height: 27px;
+}
+
+.navig{
+    font-size: 20px;
+    font-family: "CommissionerR";
+}
+
+.subtext{
+    font-size: 17px;
+    font-family: "CommissionerR";
+}
+
+.smalesttext{
+    font-size: 14px;
+    font-family: "CommissionerR";
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.container{
+    max-width: 1620px;
+    padding: 0 20px;
+    margin: 0 auto;
+}
+
+/*_______________________________________Навигация__________________________________________________________*/
+
+.navigation{
+     position: fixed;
+    top: 45px;
+     z-index: 1000;
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 39px;
+
+    background-color: var(--grey);
+    border-radius: 50px;
+    padding: 22px 40px;
+    opacity: 80%;
+
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+
+.navigation a{
+    color: #999999;
+    transition: 0.2s;
+}
+
+.navigation a:hover{
+    color: white;
+}
+
+.navigation a:active{
+    color: var(--pink);
+
+}
+
+.navigation.hide {
+    transform: translateY(-150%);
+}
+
+.back{
+    position: fixed;
+    top: 45px;
+     z-index: 1000;
+  
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 39px;
+
+
+}
+/*_______________________________________Шапка__________________________________________________________*/
+
+
+
+.shapka{
+    max-width: 100%;
+    min-width: 1000px;
+    height: auto;  
+    background-size: cover; 
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.title{
+    padding-top: 700px;
+    max-width: 1000px;
+
+}
+
+/*_______________________________________Наверх__________________________________________________________*/
+
+.up{
+    transform: rotateY('90');
+    position: fixed;
+    align-self: end;
+    bottom: 45px;
+    z-index: 1000;
+    right: 25px;
+
+    background: white;
+    opacity: 80%;
+    cursor: pointer;
+
+}
+
+
+
+/*_______________________________________Навигация между__________________________________________________________*/
+
+.but_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.nextprev{
+
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    justify-content: space-between;
+
+}
+
+.round path{
+    transition: 0.2s;
+}
+
+.round:hover path {
+    fill: var(--red);
+}
+
+.round:active path {
+    fill: var(--pink);
+}
+
+.round{
+    border-radius: 50px;
+    width: 72px;
+    height: 72px;
+    border: 1px solid var(--middle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+.round:hover{
+    border: 1px solid var(--red);
+}
+
+.round:active{
+    border: 1px solid var(--pink);
+}
+
+.top{
+    padding-top: 40px;
+    padding-bottom: 120px;
+}
+
+.bott{
+    padding-bottom: 120px;
+}
+
+
+
+
+
+
+/* Футтер */
+
+
+footer{
+    background-color: var(--darkred);
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+footer h1{
+    padding-bottom: 105px;
+}
+
+
+.info{
+    display: flex;
+    max-width: 693px;
+    justify-content: space-between;
+    gap: 24px;
+    flex-direction: row;
+}
+
+.qwestions{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.qw_them{
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.qw_them p{
+    font-family: "CommissionerME";
+    color: white;
+}
+
+.qw_them a{
+    font-family: "CommissionerME";
+    color: white;
+    font-size: 22px;
+}
+
+.qw_them a:hover{
+    color: var(--red);
+}
+.qw_them a:active{
+    color: var(--pink);
+}
+
+
+
+
+.qw_title{
+    padding-bottom: 32px;
+    color: var(--middle);
+}
+
+.so_title{
+    padding-bottom: 32px;
+    color: var(--middle);
+}
+
+
+.line {
+    width: 1px;
+    background: var(--middle);
+}
+
+.buttons_block{
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+}
+
+.so_but{
+    background: var(--cherry);
+    height: 46px;
+    width: 46px;
+    border-radius: 30px;
+    align-content: center;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.so_but:hover{
+    background: var(--red);
+}
+
+.so_but:active{
+    background: var(--pink);
+}

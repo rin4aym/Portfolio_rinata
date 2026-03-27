@@ -1,0 +1,397 @@
+.index{
+    padding-top: 268px;
+    padding-bottom: 16px;
+}
+
+
+
+.diff h3{
+    color: white;
+    text-transform:none;
+    font-family: "CommissionerME";
+
+}
+
+.shapka{
+    max-width: 100%;
+    min-width: 1000px;
+    height: auto;  
+    background-size: cover; 
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.name{
+    display: flex;
+    flex-direction: column;
+    gap: 520px;
+}
+
+.graf h3{
+    font-family: "CommissionerR";
+}
+
+.big_title{
+    padding-top: 256px;
+    padding-bottom: 120px;
+}
+
+
+
+.block_me{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    flex-direction: row;
+    gap: 24px;
+    flex-wrap: nowrap;
+    padding-bottom: 256px;
+}
+
+.block_me h3{
+    text-transform:none;
+    padding-bottom: 20px;
+}
+
+.me_text{
+    width: 100%;
+}
+
+.boring{
+    display: flex;
+    align-items: start;
+    flex-direction: row;
+    gap: 96px;
+    padding-bottom: 40px;
+    max-width: 1072px;
+}
+
+.all{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 668px;
+}
+
+.s_line{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 24px;
+}
+
+.sp_tags{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.tag{
+    font-size: 17px;
+    font-family: "CommissionerR";
+    color: black;
+    border: 1px solid var(--lightgrey);
+    border-radius: 30px;
+    padding: 16px 32px;
+}
+
+
+.me_photo img{
+    width: 524px;
+    height: auto;
+}
+
+
+.skills h1{
+    color: black;
+}
+
+.content_skills{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    column-gap: 24px;
+
+}
+
+.skills_text p{
+    color: black;
+    width: 390px;
+}
+
+.skills_numbers{
+
+    opacity: 0;
+    transform: translateY(100px);
+    
+    width: 1040px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    row-gap: 75px;
+    column-gap: 75px;
+    flex-wrap: wrap;
+
+}
+
+.skills_numbers.element-show {
+    opacity: 1;
+    transition: all 1.5s;
+    transform: translateY(0%);
+}
+
+
+
+
+
+
+
+
+
+.block_proj{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-content: flex-start;
+    height: 980px;
+    gap: 24px;
+
+    padding-bottom: 256px;
+}
+
+.vertic{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow-y: auto;
+    max-height: 100%;
+}
+.vertic::-webkit-scrollbar {
+    display: none; 
+}
+
+.vertic_item{
+    position: relative;
+    cursor: pointer;
+
+    color: white;
+    font-size: 22px;
+    font-family: "CommissionerR";
+}
+
+.vertic_item span{
+    padding: 8px;
+}
+
+.vertic_item img {
+    width: 100%;
+    display: block;
+}
+
+.vertic_item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    transition: 0.3s;
+}
+
+.vertic_item.active::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 15px;
+    height: 100%;
+    background: linear-gradient(to bottom, rgb(172, 11, 13),  rgb(59, 0, 5));
+}
+
+.vertic_item span {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    z-index: 2;
+}
+
+.vertic_item:hover::before {
+    background: rgba(0,0,0,0);
+}
+
+.vertic_item.active::before {
+    background: rgba(0,0,0,0);
+}
+
+/* ПРАВАЯ ЧАСТЬ */
+.prew {
+    flex: 1;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end; 
+}
+
+/* БЛЮР */
+.prew::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -24px;
+    right: 0;
+    height: 406px;
+
+    backdrop-filter: blur(11px);
+    -webkit-backdrop-filter: blur(11px);
+
+    mask-image: linear-gradient(
+        to bottom,
+        transparent 0%,
+        black 100%
+    );
+
+    z-index: 5;
+    pointer-events: none;
+}
+
+/* ГРАДИЕНТ */
+.prew::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -24px;
+    right: 0;
+    height: 406px;
+
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgb(215, 214, 219) 100%
+    );
+
+    z-index: 6;
+    pointer-events: none;
+}
+
+
+
+/* Если нужно более плавное размытие с маской */
+.prew_inner {
+    position: relative;
+    width: 55%;
+    height: 100%;
+}
+
+
+.prew_inner img {
+    position: absolute;
+    inset: 0;
+
+    transition: 
+        opacity 0.1s ease,
+        transform 0.5s ease,
+        filter 0.1s ease;
+}
+
+/* текущая */
+.prew_inner img.active {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+    z-index: 2;
+
+    filter: blur(0px);
+    transition: filter 0.3s ease;
+}
+
+
+/* уходящая */
+.prew_inner img.out {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(8px);
+    z-index: 1;
+}
+
+/* новая (до появления) */
+.prew_inner img.next {
+    opacity: 0;
+    transform: scale(1.1);
+    filter: blur(10px);
+    z-index: 3;
+}
+
+
+.triangle{
+    margin-left: -24px;
+}
+
+
+.text_proj{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-top: 226px;
+
+    z-index: 7;
+
+    transition: 
+        opacity 0.3s ease,
+        transform 0.4s ease;
+}
+
+.text_proj.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.text_proj.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.text_proj h3{
+    max-width: 527px;
+}
+
+.desc{
+    max-width: 498px;
+}
+
+.tags{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
+.p_tags{
+    font-size: 14px;
+    font-family: "CommissionerR";
+    color: black;
+    border: 1px solid var(--lightgrey);
+    border-radius: 30px;
+    padding: 13px 24px;
+}
+
+.line_p{
+    height: 1px;
+    width: 387px;
+    background: var(--middle);
+}
+
+.year{
+    color: black;
+    font-family: "CommissionerSB";
+    font-size: 20px;
+}
+
+.pereyty{
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    text-align: left;
+    align-items: center;
+}
