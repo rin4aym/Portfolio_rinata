@@ -219,16 +219,33 @@
 
 /* КАРУСЕЛЬ КАРУСЕЛЬ */
 
+.karusel{
+    position: relative; /* ВАЖНО */
+    width: 100%;
+}
+
 .kar_next{
     display: flex;
     flex-direction: row;
     gap: 64px;
-    justify-content: end;
-    padding-top: 24px;
+    justify-content: center;
+    padding-bottom: 24px;
+    position: absolute;
+    bottom: 0;
+    right: 32px;
+
+    z-index: 10;
 }
 
 .karusel img{
     width: 100%;
+    height: auto;
+    display: block;
+}
+
+.karusel_btn{
+    background: rgb(225, 225, 225, 0.5);
+    border: 1px solid black;
 }
 
 
@@ -298,7 +315,7 @@
     inset: 0;
     height: 645px;
 
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(225, 225, 225, 0.35);
     pointer-events: none;
 
     opacity: 1;
