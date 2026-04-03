@@ -26,7 +26,7 @@
 .name{
     display: flex;
     flex-direction: column;
-    gap: 390px;
+    gap: 410px;
 }
 
 .graf h3{
